@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package example.android.xtasyevents;
+package com.example.xtasy;
 
 public class Participant {
     private String xtasyid,name,email,college,contact,gender;

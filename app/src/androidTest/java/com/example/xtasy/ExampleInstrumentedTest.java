@@ -1,4 +1,4 @@
-package example.android.xtasyevents;
+package com.example.xtasy;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("example.android.xtasyevents", appContext.getPackageName());
+        assertEquals("com.example.xtasy", appContext.getPackageName());
     }
 }

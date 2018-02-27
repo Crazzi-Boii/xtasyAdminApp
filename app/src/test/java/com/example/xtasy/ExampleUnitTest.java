@@ -1,4 +1,4 @@
-package example.android.xtasyevents;
+package com.example.xtasy;
 
 import org.junit.Test;
 
