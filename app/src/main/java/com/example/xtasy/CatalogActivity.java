@@ -23,6 +23,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.xtasy.data.PetContract.PetEntry;
 
 /**
@@ -36,12 +40,13 @@ public class CatalogActivity extends AppCompatActivity implements
 
     /** Adapter for the ListView */
     PetCursorAdapter mCursorAdapter;
+    public static final String LOG_TAG = EditorActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog);
-
+        setTitle("Home");
         // Setup FAB to open EditorActivity
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +102,7 @@ public class CatalogActivity extends AppCompatActivity implements
         // Create a ContentValues object where column names are the keys,
         // and Toto's pet attributes are the values.
         ContentValues values = new ContentValues();
-        values.put(PetEntry.COLUMN_PET_ID, "xtasy1056");
+        values.put(PetEntry.COLUMN_PET_ID, "1056");
         values.put(PetEntry.COLUMN_PET_NAME, "Sinchan");
         values.put(PetEntry.COLUMN_PET_EMAIL, "skmishra1998@gmail.com");
         values.put(PetEntry.COLUMN_PET_COLLEGE, "CET");
@@ -140,6 +145,14 @@ public class CatalogActivity extends AppCompatActivity implements
             // Respond to a click on the "Delete all entries" menu option
             case R.id.action_delete_all_entries:
                 showDeleteConfirmationDialog();
+                return true;
+            case R.id.action_export:
+                Intent intent = new Intent(CatalogActivity.this, ExportActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_app_info:
+                Intent intent1 = new Intent(CatalogActivity.this, InfoActivity.class);
+                startActivity(intent1);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -184,7 +197,6 @@ public class CatalogActivity extends AppCompatActivity implements
                 PetEntry.COLUMN_PET_GENDER,
                 PetEntry.COLUMN_PET_EXTRAS
                  };
-
         // This loader will execute the ContentProvider's query method on a background thread
         return new CursorLoader(this,   // Parent activity context
                 PetEntry.CONTENT_URI,   // Provider content URI to query
@@ -205,7 +217,4 @@ public class CatalogActivity extends AppCompatActivity implements
         // Callback called when the data needs to be deleted
         mCursorAdapter.swapCursor(null);
     }
-
-
-
 }

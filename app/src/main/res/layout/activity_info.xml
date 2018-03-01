@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#000000">
+    <ImageView
+        android:id="@+id/xtasy_logo"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:contextClickable="false"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xtasy_logo"
+        android:layout_centerHorizontal="true"
+        android:contextClickable="false"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="in association with"
+        android:textColor="@color/colorPrimary"
+        android:textSize="23dp"
+        android:visibility="visible"
+        tools:text="in association with" />
+
+    <ImageView
+        android:padding="4dp"
+        android:id="@+id/zairza_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zairza"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="160dp"
+        android:layout_below="@id/textView1"
+        android:contextClickable="false"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zairza_logo"
+        android:layout_centerHorizontal="true"
+        android:contextClickable="false"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="presents the Coordinators' App"
+        android:textColor="@color/colorPrimary"
+        android:textSize="23dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="289dp"
+        tools:text="presents the Coordinators' App" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:contextClickable="false"
+        android:fontFamily="sans-serif-smallcaps"
+        android:padding="3dp"
+        android:text="Rarely has an automated fest registrartion system been implemented at a college fest in India. With this app, we proceed a step further towards digital reality."
+        android:textAlignment="center"
+        android:textColor="@color/zxing_custom_viewfinder_laser"
+        android:textSize="15dp"
+        android:visibility="visible"
+        tools:text="Rarely has an automated fest registrartion system been implemented at a college fest in India. With this app, we proceed a step further towards digital reality." />
+
+    <LinearLayout
+        android:padding="1dp"
+        android:id="@+id/lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true">
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chief Developer: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="13dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="410dp"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true"
+        tools:text="Chief Developer: " />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sinchan Ku Mishra\nskmishra1998@gmail.com\n9124046288"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="13dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="410dp"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true"
+        tools:text="Sinchan Ku Mishra\nskmishra1998@gmail.com\n9124046288" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="\u00a9 2018 Zairza"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="17dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="460dp"
+        android:layout_below="@id/lay"
+        android:layout_centerHorizontal="true"
+        tools:text="\u00a9 2018 Zairza" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:fontFamily="monospace"
+        android:text="http://xtasy.cetb.in"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="17dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="483dp"
+        android:layout_below="@id/textView5"
+        android:layout_centerHorizontal="true"
+        tools:text="http://xtasy.cetb.in" />
+
+</RelativeLayout>
